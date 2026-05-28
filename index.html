@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card center">
+    <h1>Vehicle Service Management System</h1>
+    <p>Cloud-ready service booking and tracking platform powered by Flask + AWS DynamoDB.</p>
+    <div class="actions">
+        <a class="btn" href="{{ url_for('login') }}">Login</a>
+        <a class="btn btn-outline" href="{{ url_for('register') }}">Create Account</a>
+    </div>
+</section>
+{% endblock %}

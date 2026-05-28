@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card form-card">
+    <h2>Book Service Appointment</h2>
+    <form method="POST">
+        <label>Select Vehicle</label>
+        <select name="vehicle_id" required>
+            <option value="">-- Select Vehicle --</option>
+            {% for v in vehicles %}
+                <option value="{{ v.vehicle_id }}">{{ v.vehicle_number }} - {{ v.brand }} {{ v.model }}</option>
+            {% endfor %}
+        </select>
+
+        <label>Service Date</label>
+        <input type="date" name="service_date" required />
+
+        <label>Service Type</label>
+        <input type="text" name="service_type" placeholder="General service / Oil change / Brake check" required />
+
+        <button class="btn" type="submit">Book Appointment</button>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card form-card">
+    <h2>Add Vehicle</h2>
+    <form method="POST">
+        <label>Vehicle Number</label>
+        <input type="text" name="vehicle_number" required />
+
+        <label>Model</label>
+        <input type="text" name="model" required />
+
+        <label>Brand</label>
+        <input type="text" name="brand" required />
+
+        <label>Year</label>
+        <input type="number" name="year" min="1980" max="2100" required />
+
+        <button class="btn" type="submit">Save Vehicle</button>
+    </form>
+</section>
+{% endblock %}

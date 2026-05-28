@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card invoice">
+    <h2>Invoice</h2>
+    <p><strong>Appointment ID:</strong> {{ appointment.appointment_id }}</p>
+    <p><strong>Vehicle:</strong> {{ vehicle.vehicle_number }} - {{ vehicle.brand }} {{ vehicle.model }}</p>
+    <p><strong>Service Type:</strong> {{ appointment.service_type }}</p>
+    <p><strong>Service Date:</strong> {{ appointment.service_date }}</p>
+    <hr />
+    <p><strong>Amount:</strong> {{ bill.amount }}</p>
+    <p><strong>Payment Status:</strong> {{ bill.payment_status }}</p>
+</section>
+{% endblock %}

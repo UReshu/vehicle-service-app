@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Customer Dashboard</h2>
+<p class="highlight">{{ next_service_msg }}</p>
+
+<div class="actions">
+    <a class="btn" href="{{ url_for('add_vehicle') }}">Add Vehicle</a>
+    <a class="btn" href="{{ url_for('book_service') }}">Book Service</a>
+    <a class="btn btn-outline" href="{{ url_for('service_history') }}">Service History</a>
+</div>
+
+<section class="card">
+    <h3>Your Vehicles</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for v in vehicles %}
+            <tr>
+                <td>{{ v.vehicle_number }}</td>
+                <td>{{ v.brand }}</td>
+                <td>{{ v.model }}</td>
+                <td>{{ v.year }}</td>
+            </tr>
+            {% else %}
+            <tr><td colspan="4">No vehicles added yet.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<section class="card">
+    <h3>Your Appointments</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Service Date</th>
+                <th>Service Type</th>
+                <th>Status</th>
+                <th>Invoice</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in appointments %}
+            <tr>
+                <td>{{ a.service_date }}</td>
+                <td>{{ a.service_type }}</td>
+                <td>{{ a.status }}</td>
+                <td>
+                    {% if a.status == "Completed" %}
+                    <a href="{{ url_for('invoice', appointment_id=a.appointment_id) }}">View Invoice</a>
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+            {% else %}
+            <tr><td colspan="4">No appointments found.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}

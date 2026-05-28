@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Service History</h2>
+
+<section class="card form-card">
+    <form method="GET">
+        <label>Select Vehicle</label>
+        <select name="vehicle_id" required>
+            <option value="">-- Select Vehicle --</option>
+            {% for v in vehicles %}
+                <option value="{{ v.vehicle_id }}" {% if selected_vehicle_id == v.vehicle_id %}selected{% endif %}>
+                    {{ v.vehicle_number }} - {{ v.brand }} {{ v.model }}
+                </option>
+            {% endfor %}
+        </select>
+        <button class="btn" type="submit">View History</button>
+    </form>
+</section>
+
+<section class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>Service Date</th>
+                <th>Details</th>
+                <th>Cost</th>
+                <th>Next Service Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in history %}
+            <tr>
+                <td>{{ item.service_date }}</td>
+                <td>{{ item.details }}</td>
+                <td>{{ item.cost }}</td>
+                <td>{{ item.next_service_date }}</td>
+            </tr>
+            {% else %}
+            <tr><td colspan="4">No service history found for selected vehicle.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}

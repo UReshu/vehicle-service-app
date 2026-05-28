@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Admin Dashboard</h2>
+
+<section class="card">
+    <h3>All Appointments</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>User</th>
+                <th>Vehicle</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Mechanic</th>
+                <th>Cost</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in appointments %}
+            <tr>
+                <td>{{ a.appointment_id[:8] }}...</td>
+                <td>{{ a.user_id[:8] }}...</td>
+                <td>{{ a.vehicle_id[:8] }}...</td>
+                <td>{{ a.service_date }}</td>
+                <td>{{ a.service_type }}</td>
+                <td>{{ a.status }}</td>
+                <td>{{ mechanic_map.get(a.mechanic_id, "-") }}</td>
+                <td>
+                    {% if a.status == "Completed" %}
+                        Added to history
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+                <td>
+                    <form method="POST" action="{{ url_for('update_appointment', appointment_id=a.appointment_id) }}">
+                        <select name="status" required>
+                            <option value="Pending" {% if a.status == "Pending" %}selected{% endif %}>Pending</option>
+                            <option value="In Progress" {% if a.status == "In Progress" %}selected{% endif %}>In Progress</option>
+                            <option value="Completed" {% if a.status == "Completed" %}selected{% endif %}>Completed</option>
+                        </select>
+                        <select name="mechanic_id">
+                            <option value="">-- Select Mechanic --</option>
+                            {% for m in mechanics %}
+                            <option value="{{ m.mechanic_id }}" {% if a.mechanic_id == m.mechanic_id %}selected{% endif %}>{{ m.name }}</option>
+                            {% endfor %}
+                        </select>
+                        <input type="number" name="cost" min="0" step="0.01" placeholder="Cost (if completed)" />
+                        <button class="btn small" type="submit">Update</button>
+                    </form>
+                </td>
+            </tr>
+            {% else %}
+            <tr><td colspan="9">No appointments found.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<section class="card">
+    <h3>Customers</h3>
+    <table>
+        <thead>
+            <tr><th>Name</th><th>Email</th><th>Phone</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+            {% for u in users %}
+            <tr>
+                <td>{{ u.name }}</td>
+                <td>{{ u.email }}</td>
+                <td>{{ u.phone }}</td>
+                <td>{{ u.role }}</td>
+            </tr>
+            {% else %}
+            <tr><td colspan="4">No users found.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<section class="card">
+    <h3>Vehicles</h3>
+    <table>
+        <thead>
+            <tr><th>Vehicle Number</th><th>Brand</th><th>Model</th><th>Year</th><th>User ID</th></tr>
+        </thead>
+        <tbody>
+            {% for v in vehicles %}
+            <tr>
+                <td>{{ v.vehicle_number }}</td>
+                <td>{{ v.brand }}</td>
+                <td>{{ v.model }}</td>
+                <td>{{ v.year }}</td>
+                <td>{{ v.user_id[:8] }}...</td>
+            </tr>
+            {% else %}
+            <tr><td colspan="5">No vehicles found.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}
