@@ -1,0 +1,212 @@
+{
+  "users": {
+    "09448ca6-a0a8-4d9c-9eaa-93d83b8b57c6": {
+      "user_id": "09448ca6-a0a8-4d9c-9eaa-93d83b8b57c6",
+      "name": "jasmin",
+      "email": "jasmin123@gmail.com",
+      "phone": "1234567890",
+      "password": "scrypt:32768:8:1$Rua4IqsjtlD2HkUC$ab14534a9e779d5d1cf6a2be8394554f3ab86bde991a8a4fcc818a2c5e446ea2fd8bf31dc29b0689f123fe26df09860098c46b46849d6aeac2f5faf96251fc96",
+      "role": "admin"
+    },
+    "59b059f9-6686-4861-b813-2b2a0441a2d7": {
+      "user_id": "59b059f9-6686-4861-b813-2b2a0441a2d7",
+      "name": "jaya",
+      "email": "jaya123@gmail.com",
+      "phone": "9876544321",
+      "password": "scrypt:32768:8:1$tQB5iV1giO1NEa5M$f63a79b9f108270ff0d2df640d62bd4822a2084866f733cdf85a133850ee3b5949fba4477d6560806a0a681a886a7168e6db546ef46c36bf87ad8f788a35d5bc",
+      "role": "customer"
+    },
+    "b8ba9cd8-974c-47e8-84d3-c9a501a23557": {
+      "user_id": "b8ba9cd8-974c-47e8-84d3-c9a501a23557",
+      "name": "U Reshma",
+      "email": "ureshma2002@gmail.com",
+      "phone": "7204863429",
+      "password": "scrypt:32768:8:1$ScDAE1FbVsL8Sigl$40045add3e064e8c1ea66e816137f54f4e299a00e8c50666bd4b548e2ab2a0c8f34f62f4973fd5cd84231feaff43d4b80062c104e2584f1bf6c347a360e302f6",
+      "role": "admin"
+    },
+    "71597afa-fecf-4768-985a-50f3987ded21": {
+      "user_id": "71597afa-fecf-4768-985a-50f3987ded21",
+      "name": "vani",
+      "email": "vani1404@gmail.com",
+      "phone": "8096284740",
+      "password": "scrypt:32768:8:1$EwPxAnvUnjy1B0z2$e34e5ff2507e590d24d23438a42ca08d45a8d69b9433d30b2f120eb51ea8cc015e2cc4f2ada88c0da73372586fba5100695c1a3d37b2bd453e5966af2377dd30",
+      "role": "customer"
+    },
+    "895e2c70-d211-4fb3-8686-9a566087db53": {
+      "user_id": "895e2c70-d211-4fb3-8686-9a566087db53",
+      "name": "gadilinga",
+      "email": "gadilinga123@gmail.com",
+      "phone": "1234567890",
+      "password": "scrypt:32768:8:1$j7QYB03WhKsLhDz2$d8fbb92196efc5c336c8ad562eadc366d2c951fdab997e3517e83537d06c9c1a87e85c10a32484d2e4caa425e732350dca122ce5140214dace6461c198405e37",
+      "role": "customer"
+    },
+    "b8887395-8d0d-4112-8053-8a3aae4e90b9": {
+      "user_id": "b8887395-8d0d-4112-8053-8a3aae4e90b9",
+      "name": "U REVATHI",
+      "email": "vasu1404@gmail.com",
+      "phone": "9611030211",
+      "password": "scrypt:32768:8:1$nB12znC5gCb4e3Vh$0cd8ceac565289f9bfac6b9804b24e0ba964d9ce499d829b28df01ee59086fa6b9840ffd648fcbefc43623e808a0300d0dea4fa68ba96469a25c289664474e61",
+      "role": "customer"
+    },
+    "82b94ca2-ac44-42a2-ad84-81f12aec605d": {
+      "user_id": "82b94ca2-ac44-42a2-ad84-81f12aec605d",
+      "name": "swathi",
+      "email": "swathi2002@gmail.com",
+      "phone": "9842888623",
+      "password": "scrypt:32768:8:1$TR1Gw1eNYPbEsUaP$8b35d439fe03444712d38766bf437f55e07eb61a56600d7e93878a38ec10baef56995bc42b7de9e70cc19f91c031c63062f2df7c244dcefd4b77c2723d1d77e9",
+      "role": "customer"
+    }
+  },
+  "vehicles": {
+    "edcb1c67-67d4-4625-855c-68a24dac4142": {
+      "vehicle_id": "edcb1c67-67d4-4625-855c-68a24dac4142",
+      "user_id": "59b059f9-6686-4861-b813-2b2a0441a2d7",
+      "vehicle_number": "12345",
+      "model": "hero",
+      "brand": "hero",
+      "year": "2026"
+    },
+    "101e8875-1e5e-4f58-84c6-ee7d99761acd": {
+      "vehicle_id": "101e8875-1e5e-4f58-84c6-ee7d99761acd",
+      "user_id": "71597afa-fecf-4768-985a-50f3987ded21",
+      "vehicle_number": "KA01AB1234",
+      "model": "Swift",
+      "brand": "Maruthi Suzuki",
+      "year": "2022"
+    },
+    "c3bb375c-0de2-4fdd-88b6-47c475c6dfea": {
+      "vehicle_id": "c3bb375c-0de2-4fdd-88b6-47c475c6dfea",
+      "user_id": "895e2c70-d211-4fb3-8686-9a566087db53",
+      "vehicle_number": "KA34EH4101",
+      "model": "Tvs",
+      "brand": "Tvs",
+      "year": "2022"
+    },
+    "57149ffd-8fdf-4eb9-a9ab-a8d3c08e7ecf": {
+      "vehicle_id": "57149ffd-8fdf-4eb9-a9ab-a8d3c08e7ecf",
+      "user_id": "b8887395-8d0d-4112-8053-8a3aae4e90b9",
+      "vehicle_number": "KA01AB1236",
+      "model": "Honda",
+      "brand": "spinder",
+      "year": "2021"
+    }
+  },
+  "appointments": {
+    "0cacee1e-792e-45ff-b332-161f28fc851b": {
+      "appointment_id": "0cacee1e-792e-45ff-b332-161f28fc851b",
+      "user_id": "59b059f9-6686-4861-b813-2b2a0441a2d7",
+      "vehicle_id": "edcb1c67-67d4-4625-855c-68a24dac4142",
+      "service_date": "2026-05-09",
+      "service_type": "oil change",
+      "status": "Completed",
+      "mechanic_id": "de42c689-4314-49c6-89f9-36928290deb1"
+    },
+    "b49483a0-bf57-477d-8440-35eb57bf8d91": {
+      "appointment_id": "b49483a0-bf57-477d-8440-35eb57bf8d91",
+      "user_id": "71597afa-fecf-4768-985a-50f3987ded21",
+      "vehicle_id": "101e8875-1e5e-4f58-84c6-ee7d99761acd",
+      "service_date": "2026-05-26",
+      "service_type": "oil change",
+      "status": "Completed",
+      "mechanic_id": "2ae8782c-69c6-4e08-8fc4-993ac90c4e7a"
+    },
+    "25499deb-d6fa-418b-ad54-6b27753e3870": {
+      "appointment_id": "25499deb-d6fa-418b-ad54-6b27753e3870",
+      "user_id": "895e2c70-d211-4fb3-8686-9a566087db53",
+      "vehicle_id": "c3bb375c-0de2-4fdd-88b6-47c475c6dfea",
+      "service_date": "2026-05-26",
+      "service_type": "general service",
+      "status": "Completed",
+      "mechanic_id": "de42c689-4314-49c6-89f9-36928290deb1"
+    },
+    "3d7252f7-1466-4f7d-972b-ec0df5e73efd": {
+      "appointment_id": "3d7252f7-1466-4f7d-972b-ec0df5e73efd",
+      "user_id": "b8887395-8d0d-4112-8053-8a3aae4e90b9",
+      "vehicle_id": "57149ffd-8fdf-4eb9-a9ab-a8d3c08e7ecf",
+      "service_date": "2026-05-29",
+      "service_type": "break check",
+      "status": "Completed",
+      "mechanic_id": "4ee12ae5-351a-4168-86e5-463e04bfbf27"
+    }
+  },
+  "mechanics": {
+    "de42c689-4314-49c6-89f9-36928290deb1": {
+      "mechanic_id": "de42c689-4314-49c6-89f9-36928290deb1",
+      "name": "Amit Kumar",
+      "specialization": "Engine",
+      "phone": "9000000001"
+    },
+    "2ae8782c-69c6-4e08-8fc4-993ac90c4e7a": {
+      "mechanic_id": "2ae8782c-69c6-4e08-8fc4-993ac90c4e7a",
+      "name": "Ravi Singh",
+      "specialization": "Electrical",
+      "phone": "9000000002"
+    },
+    "4ee12ae5-351a-4168-86e5-463e04bfbf27": {
+      "mechanic_id": "4ee12ae5-351a-4168-86e5-463e04bfbf27",
+      "name": "Neha Patel",
+      "specialization": "General Service",
+      "phone": "9000000003"
+    }
+  },
+  "service_history": {
+    "37577da5-5b0e-42ad-a3e1-a73b68cf68cb": {
+      "history_id": "37577da5-5b0e-42ad-a3e1-a73b68cf68cb",
+      "vehicle_id": "edcb1c67-67d4-4625-855c-68a24dac4142",
+      "service_date": "2026-05-09",
+      "details": "oil change",
+      "cost": 200.0,
+      "next_service_date": "2026-08-07"
+    },
+    "ac936f65-dc08-4c72-b728-d25dd76b6d74": {
+      "history_id": "ac936f65-dc08-4c72-b728-d25dd76b6d74",
+      "vehicle_id": "101e8875-1e5e-4f58-84c6-ee7d99761acd",
+      "service_date": "2026-05-26",
+      "details": "oil change",
+      "cost": 500.0,
+      "next_service_date": "2026-08-24"
+    },
+    "b22e0222-f701-4a79-a805-c9a743e3cd1a": {
+      "history_id": "b22e0222-f701-4a79-a805-c9a743e3cd1a",
+      "vehicle_id": "c3bb375c-0de2-4fdd-88b6-47c475c6dfea",
+      "service_date": "2026-05-26",
+      "details": "general service",
+      "cost": 1000.0,
+      "next_service_date": "2026-08-24"
+    },
+    "8235c598-11dd-49a9-9811-64248b8f809d": {
+      "history_id": "8235c598-11dd-49a9-9811-64248b8f809d",
+      "vehicle_id": "57149ffd-8fdf-4eb9-a9ab-a8d3c08e7ecf",
+      "service_date": "2026-05-29",
+      "details": "break check",
+      "cost": 1500.0,
+      "next_service_date": "2026-08-27"
+    }
+  },
+  "bills": {
+    "b6162c9c-699d-483a-a8eb-a4c0a044f64c": {
+      "bill_id": "b6162c9c-699d-483a-a8eb-a4c0a044f64c",
+      "appointment_id": "0cacee1e-792e-45ff-b332-161f28fc851b",
+      "amount": 200.0,
+      "payment_status": "Pending"
+    },
+    "f8dd134b-cf04-4a57-a026-f69c50982635": {
+      "bill_id": "f8dd134b-cf04-4a57-a026-f69c50982635",
+      "appointment_id": "b49483a0-bf57-477d-8440-35eb57bf8d91",
+      "amount": 500.0,
+      "payment_status": "Pending"
+    },
+    "68718105-4af2-4ed1-8688-43ef473cc202": {
+      "bill_id": "68718105-4af2-4ed1-8688-43ef473cc202",
+      "appointment_id": "25499deb-d6fa-418b-ad54-6b27753e3870",
+      "amount": 1000.0,
+      "payment_status": "Pending"
+    },
+    "eb085399-9b03-4016-84df-bb6b2d063864": {
+      "bill_id": "eb085399-9b03-4016-84df-bb6b2d063864",
+      "appointment_id": "3d7252f7-1466-4f7d-972b-ec0df5e73efd",
+      "amount": 1500.0,
+      "payment_status": "Pending"
+    }
+  }
+}
